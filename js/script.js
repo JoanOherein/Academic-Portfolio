@@ -1,11 +1,32 @@
 // Shared portfolio JavaScript: mobile navigation, planner, and contact validation.
 document.addEventListener("DOMContentLoaded", () => {
   initialiseNavigation();
+  initialiseScrollReveals();
   updateCopyrightYear();
   initialiseImageFallbacks();
   initialisePlanner();
   initialiseContactForm();
 });
+
+function initialiseScrollReveals() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) return;
+
+  const revealElements = document.querySelectorAll(
+    ".page-header > .container, .section-heading, .intro-grid > div, .prose, .interest-card, .project-card, .project-detail, .timeline-item, .skill-columns > article, .two-column > article, .two-column > aside, .audio-card, .planner-dashboard, .contact-form-wrap"
+  );
+  const observer = new IntersectionObserver((entries, currentObserver) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      currentObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -32px 0px" });
+
+  revealElements.forEach((element) => {
+    element.classList.add("reveal-on-scroll");
+    observer.observe(element);
+  });
+}
 
 function initialiseNavigation() {
   const navigationToggle = document.querySelector(".nav-toggle");

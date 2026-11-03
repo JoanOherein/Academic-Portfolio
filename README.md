@@ -31,9 +31,23 @@ Academic Portfolio/
 ├── projects.html
 ├── planner.html
 ├── contact.html
-├── css/style.css
-├── js/script.js
-├── images/
+├── assets/
+│   ├── audio/
+│   │   └── Joan intoduction.mp3.ogg
+│   └── images/
+│       ├── Profile.Jpeg
+│       ├── project 1.png
+│       ├── Project 2.png
+│       ├── Project 3.png
+│       ├── profile.svg
+│       ├── planner.svg
+│       ├── process.svg
+│       ├── sales-dashboard.svg
+│       └── profile-introduction.vtt
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
 └── README.md
 ```
 
@@ -58,11 +72,15 @@ This website has no backend. Valid contact form submission only confirms that va
 
 ## Replace profile and project images
 
-- Replace `images/profile.jpg` with the student's real photograph if desired. Keep this filename to avoid changing the HTML, or update both home and About page image paths.
-- `images/profile.svg` is the local fallback and replacement placeholder.
-- Sales, planner, and process project artwork are in `images/sales-dashboard.svg`, `images/planner.svg`, and `images/process.svg`.
+- Replace `assets/images/Profile.Jpeg` with the student's real photograph if desired. Keep this filename to avoid changing the HTML, or update both home and About page image paths.
+- `assets/images/profile.svg` is the local fallback and replacement placeholder.
+- Sales, planner, and process project artwork are in `assets/images/sales-dashboard.svg`, `assets/images/planner.svg`, and `assets/images/process.svg`.
 - Update the `[Add your email address]` and `[Add your phone number]` labels in `contact.html` only when real, permitted details are available.
-- Add a personally created or appropriately licensed video as `images/profile-introduction.mp4`. The captions file is `images/profile-introduction.vtt`.
+- Add a personally created or appropriately licensed video as `assets/images/profile-introduction.mp4`. The captions file is `assets/images/profile-introduction.vtt`.
+
+## Add your professional audio
+
+The professional journey recording plays from `assets/audio/Joan intoduction.mp3.ogg` in the About page audio player.
 
 ## Publish with GitHub Pages
 
@@ -85,9 +103,9 @@ Keep filenames in lowercase and use forward-slash paths so the project works on 
 | Semantic HTML | Headers, navigation, main, sections, articles, aside, footer |
 | HTML table | Skills table in `about.html` |
 | Lists | Ordered and unordered lists in About and project pages |
-| Images and alt text | Local project artwork and profile placeholders in `images/` |
+| Images and alt text | Local project artwork and profile placeholders in `assets/images/` |
 | Hyperlinks | Navigation, project links, internal page sections and planner demo |
-| Video and fallback text | Local HTML5 video placeholder on `about.html`; captions file in `images/profile-introduction.vtt` |
+| Video and fallback text | Local HTML5 video placeholder on `about.html`; captions file in `assets/images/profile-introduction.vtt` |
 | Shared navigation and active states | Identical navigation structure and CSS `.active` styling across pages |
 | Mobile navigation | `.nav-toggle` and JavaScript in shared script |
 | Contact form validation | Empty fields, trimmed values, email format, and digits-only phone validation |
