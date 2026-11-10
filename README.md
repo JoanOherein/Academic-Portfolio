@@ -8,7 +8,7 @@ A multi-page portfolio and academic management project for **COS 106 – Introdu
 - Programme: BSc Data Science
 - Course: COS 106 – Introduction to Web Technologies
 - Institution: Miva Open University
-- Project: Practical term project worth 20 marks
+
 
 ## Technologies
 
